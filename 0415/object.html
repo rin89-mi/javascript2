@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>オブジェクト</title>
+</head>
+
+<body>
+    <div id="sample">サンプル</div>
+    <script>
+        /* const text = document.querySelector("#sample");
+        text.addEventListener('click', () => {
+            console.log("click");
+        })
+        //オブジェクトリテラル、キーと値の集合体
+        //変数の中にオブジェクトが入るとオブジェクト名
+        const student = {
+            name: "田中",
+            grade: 2,
+            course: "Webデザイン",
+        };
+        //オブジェクトの値の取得の仕方は、2種類
+        //ドット.キー名
+        console.log(student.name);
+        console.log(student["grade"]);
+        // 田中
+
+        //関数宣言＋引数
+        function createStudentText(user) {
+            //.はオブジェクトの値を選択するための記号
+            return `${user.grade}年の${user.name}さん`;
+        }
+
+        console.log(createStudentText(student));
+        // 2年の田中さん
+
+        // オブジェクトを配列にまとめている
+        const works = [
+            { title: "バナー制作", category: "graphic" },
+            { title: "LPデザイン", category: "web" },
+            { title: "ポスター制作", category: "graphic" },
+        ];
+
+        // 1件分のオブジェクトを、表示用の文字列に変換する関数
+        function createWorkText(work) {
+            return `${work.title}（${work.category}）`;
+        }
+
+        // 配列の中身を1件ずつ取り出して、関数で文字列にして表示する
+        works.forEach((work) => {
+            console.log(createWorkText(work));
+        }); */
+
+
+        const students = [
+            { name: "田中", grade: 2 },
+            { name: "鈴木", grade: 2 },
+            { name: "佐藤", grade: 1 },
+        ];
+
+        const createStudentText = (student) => {
+            // student.grade と student.name を使って
+            // 「2年の田中さん」のような文字列を返す
+            // ここに書く
+            return `${students.grade}年の${students.name}さん`;
+        }
+
+        students.forEach(function (student) {
+            // createStudentText(student) を使って
+            // 1件ずつ console.log() で表示する
+            // ここに書く
+            return '${student}'
+        });
+        console.log(createStudentText(students));
+    </script>
+</body>
+
+</html>

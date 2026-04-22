@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>配列の操作</title>
+</head>
+
+<body>
+    <ul id="workList"></ul>
+    <script>
+        //join
+        const fruits = ["りんご", "みかん", "ぶどう"];
+
+        //配列.join("区切るための記号")
+        console.log(fruits.join("、"));
+        // りんご、みかん、ぶどう
+
+        console.log(fruits.join(""));
+        // りんごみかんぶどう
+
+        console.log(fruits.join());
+        // りんご,みかん,ぶどう
+
+        //map()と組み合わせる、aiが大好き
+        const items = ["りんご", "みかん", "ぶどう"];
+
+        // map() で <li>タグに変換 → join("") で1つの文字列にまとめる
+        const html = items.map((item) => `<li>${item}</li>`).join("");
+
+        console.log(html);
+        // <li>りんご</li><li>みかん</li><li>ぶどう</li>
+
+        // 表示したいデータを配列にまとめている
+        const works = [
+            { title: "バナー制作", category: "graphic" },
+            { title: "LPデザイン", category: "web" },
+            { title: "ポスター制作", category: "graphic" },
+        ];
+
+        // 1件分のデータを li タグの文字列に変換する
+        //関数を定義
+        function createWorkItem(work) {
+            return `<li>${work.title} / ${work.category}</li>`;
+        }
+
+        // 配列全体を受け取って、画面へ表示する
+        //関数を定義
+        function renderWorkList(items) {
+            const target = document.querySelector("#workList");
+            // 1件ずつ createWorkItem() で変換し、1つのHTML文字列にまとめて入れる
+            //関数を実行1＝関数名()
+            target.innerHTML = items.map(createWorkItem).join("");
+        }
+
+        // works 配列を渡して、一覧表示を実行する
+        //関数の実行
+        renderWorkList(works);
+
+    </script>
+</body>
+
+</html>

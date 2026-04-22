@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class</title>
+</head>
+
+<body>
+    <script>
+        class User {
+            constructor(name) {
+                this.name = name;
+            }
+
+            greet() {
+                return `こんにちは、${this.name}さん`;
+            }
+        }
+
+        const user = new User("田中");
+        console.log(user.greet());
+        // こんにちは、田中さん
+    </script>
+</body>
+
+</html>

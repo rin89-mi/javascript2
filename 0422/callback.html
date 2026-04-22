@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>コールバック関数</title>//関数の中に引数を入れられる
+</head>
+
+<body>
+    <script>
+        //関数の定義①
+        function runTask(callback) {
+            console.log("処理を開始します");
+            //関数の実行②
+            callback();
+        }
+
+        //関数の定義②
+        function showMessage() {
+            console.log("処理が終わりました");
+        }
+
+        //関数の実行①
+        runTask(showMessage);
+    </script>
+
+</body>
+
+</html>

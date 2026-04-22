@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>配列メゾット</title>
+</head>
+
+<body>
+    <script>
+        const students = [
+            { name: '田中', score: 82 },
+            { name: '鈴木', score: 55 },
+            { name: '佐藤', score: 90 },
+        ];
+
+        //findもループします
+        const topStudent = students.find((student) => student.score >= 80);
+        /*
+        const topStudent = students.find(function (student) {
+            return student.score >= 80;
+        }); */
+
+        console.log(topStudent);
+        // { name: '田中', score: 82 }
+
+        //reduce()
+        const prices = [100, 200, 300];
+
+        const total = prices.reduce((sum, price) => {
+            return sum + price;
+        }, 0);
+
+        /*
+        const total = prices.reduce(function (sum, price) {
+            return sum + price;
+              }, 0); */
+
+        console.log(total); // 600
+
+
+        const student = { name: '田中', grade: 2 };
+
+        // 従来の書き方
+        //const name = student.name;
+        //const grade = student.grade;
+
+        // 分割代入 (key名を選択)
+        const { name, grade } = student;
+
+        console.log(name);  // 田中
+        console.log(grade); // 2
+
+
+        //配列を準備
+        const colors = ['red', 'green', 'blue'];
+
+        //[]を（ブランケット）を使う
+        const [first, second, thiad] = colors;
+
+        console.log(first);  // red
+        console.log(second); // green
+        console.log(thiad);
+
+
+        const a = [1, 2, 3];
+        const b = [4, 5, 6];
+
+        const combined = [...a, ...b];
+        console.log(combined); // [1, 2, 3, 4, 5, 6]
+    </script>
+</body>
+
+</html>
