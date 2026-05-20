@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "motion": "^12.39.0"
+  },
+  "devDependencies": {
+    "vite-plugin-singlefile": "^2.3.3"
+  }
+}
