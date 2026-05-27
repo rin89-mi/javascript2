@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>scroll_app</title>
+</head>
+
+<body>
+  <!-- 追記：ページ全体のスクロール進捗を表すバー -->
+  <div class="progress-bar"></div>
+  <div class="spacer">スクロールしてください ↓</div>
+
+  <section class="fade-target">
+    <div>
+      <h2>このセクションが画面に入ったらフェードインする</h2>
+      <p>スクロールしてここまで来ると表示されます。</p>
+    </div>
+  </section>
+
+  <section class="cards">
+    <div class="card">1</div>
+    <div class="card">2</div>
+    <div class="card">3</div>
+    <div class="card">4</div>
+    <div class="card">5</div>
+    <div class="card">6</div>
+  </section>
+
+  <section class="hero">
+    <h1 class="hero-title">スクロールしてください</h1>
+  </section>
+
+
+  <div class="spacer">↑ ここまでスクロールできます</div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
