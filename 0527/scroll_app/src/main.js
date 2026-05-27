@@ -31,7 +31,12 @@ scroll(
   },
 );
 
-
+// 追記：.parallax-section のスクロールに合わせて背景画像を上に動かす
+scroll(
+  animate(".parallax-bg", { y: [0, -300] }),
+  //targetは、スクロールする領域
+  { target: document.querySelector(".parallax-section") },
+);
 
 
 

@@ -62,6 +62,33 @@
   margin: 0;
 }
 
+/* === パララックス用 === */
+/* 舞台。背景がはみ出ないようにoverflow:hidden */
+.parallax-section {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+}
+
+/* スクロールに合わせて動く背景。上下にはみ出させて動かせる余白を作る */
+.parallax-bg {
+  position: absolute;
+  inset: -100px 0;
+  background: url("https://picsum.photos/1600/1200") center / cover no-repeat;
+  z-index: 0;
+}
+
+/* 前景は背景の上に重ねて表示 */
+.parallax-content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  font-size: 1.5rem;
+}
+
 /* 中の h2 を最初は非表示（透明＆下に大きくずらして縮小）にしておく
 .fade-target h2 {
   opacity: 0;
