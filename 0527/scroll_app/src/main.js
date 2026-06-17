@@ -16,7 +16,10 @@ inView('.fade-target h2', showWithExit);
 
 // 追記：カード一覧をstaggerで順番にフェードアップ
 inView('.cards', () => {
-  animate('.card', { opacity: [0, 1], y: [40, 0] }, { duration: 0.5, delay: stagger(0.5) });
+  animate('.card', { opacity: [0, 1], y: [40, 0] }, {
+    duration: 0.5,
+    delay: stagger(0.5)
+  });
 });
 
 // 追記：ページのスクロール進捗を progress-bar の scaleX に連動

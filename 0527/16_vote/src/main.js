@@ -1,3 +1,4 @@
+console.log("main.js 読み込み成功");
 import { animate } from 'motion';
 //vote関数、getRates関数を読み込む
 import { vote, getRates, getTopId } from './candidates.js';
@@ -81,20 +82,17 @@ const createBurstHeart = (card) => {
 };
 
 const updateTopCard = () => {
-
     // 全カードから top-card を外す
     document.querySelectorAll('.card').forEach((card) => {
         card.classList.remove('top-card');
     });
-
     // 1位のid取得
     const topId = getTopId();
-
     // 1位カード取得
     const topCard = document.querySelector(`[data-id="${topId}"]`);
-
     // クラス追加
     topCard.classList.add('top-card');
+
 };
 
 document.querySelectorAll('.card').forEach((card) => {

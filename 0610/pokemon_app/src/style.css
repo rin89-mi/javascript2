@@ -1,0 +1,125 @@
+body {
+    margin: 120px 0;
+    padding: 40px;
+}
+
+h2 {
+    padding-bottom: 20px;
+}
+
+.app--empty {
+
+    justify-content: center;
+
+
+}
+
+.app--empty .pokemon-area {
+
+    display: none;
+
+}
+
+.app {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.pokemon-area {
+    width: 400px;
+}
+
+.search-area {
+    width: 300px;
+    background-color: #fff;
+    padding: 10px 30px;
+    border-radius: 16px;
+}
+
+.card {
+
+    width: 350px;
+
+    padding: 16px;
+
+    background: linear-gradient(180deg,
+
+            #ffe66d,
+
+            #ffd43b);
+
+    border: 8px solid #f5c542;
+
+    border-radius: 16px;
+
+    box-shadow:
+
+        0 8px 20px rgba(0, 0, 0, .3);
+
+    color: #222;
+
+}
+
+.search {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.search input {
+    flex: 1;
+    padding: 8px;
+}
+
+.error {
+    color: tomato;
+}
+
+.card img {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+}
+
+.loader:not([hidden]) {
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #eee;
+    border-top-color: #4caf50;
+    border-radius: 50%;
+}
+
+.pokemon-image {
+
+    background-image: url("./images/pokemon-bg.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    padding: 20px;
+
+    border-radius: 12px;
+
+    margin-bottom: 50px;
+
+
+}
+
+.pokemon-image img {
+
+    width: 200px;
+
+    height: 200px;
+
+    object-fit: contain;
+
+}
