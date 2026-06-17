@@ -3,9 +3,13 @@ const errorEl = document.querySelector(".error");
 const loader = document.querySelector(".loader");
 
 export const renderPokemon = (data) => {
+
     document.querySelector(".app").classList.remove("app--empty");
 
     const type = data.types[0].type.name;
+
+    card.className = "card";
+    card.classList.add(type);
 
     const bgMap = {
         electric: "/src/electric.jpg",
@@ -46,7 +50,8 @@ export const renderPokemon = (data) => {
     card.hidden = false;
     errorEl.hidden = true;
 };
-export const showError = function (message) {
+
+export const showError = (message) => {
     errorEl.textContent = message;
     errorEl.hidden = false;
     card.hidden = true;
@@ -54,6 +59,7 @@ export const showError = function (message) {
 
 export function setLoading(isLoading) {
     loader.hidden = !isLoading;
+
     if (isLoading) {
         card.hidden = true;
         errorEl.hidden = true;
