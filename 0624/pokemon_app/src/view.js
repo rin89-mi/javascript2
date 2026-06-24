@@ -2,14 +2,19 @@ const card = document.querySelector(".card");
 const errorEl = document.querySelector(".error");
 const loader = document.querySelector(".loader");
 
-export const renderPokemon = (data) => {
+export const renderPokemon = (data, jpName) => {
 
     document.querySelector(".app").classList.remove("app--empty");
+
+    const displayName = jpName ?? data.name;
 
     const type = data.types[0].type.name;
 
     card.className = "card";
     card.classList.add(type);
+
+    document.body.className = "";
+    document.body.classList.add(type);
 
     const bgMap = {
         electric: "/src/electric.jpg",
@@ -30,7 +35,7 @@ export const renderPokemon = (data) => {
         .join(" / ");
 
     card.innerHTML = `
-        <h2>${data.name}</h2>
+        <h2>${displayName} <small>(${data.name})</small></h2>
 
         <div
             class="pokemon-image"
@@ -38,7 +43,7 @@ export const renderPokemon = (data) => {
         >
             <img
                 src="${data.sprites.front_default}"
-                alt="${data.name}"
+                alt="${displayName}"
             >
         </div>
 
@@ -49,6 +54,20 @@ export const renderPokemon = (data) => {
 
     card.hidden = false;
     errorEl.hidden = true;
+
+    card.classList.remove("show");
+
+    void card.offsetWidth;
+
+    card.classList.add("show");
+
+    const ripple = document.createElement("div");
+    ripple.classList.add("ripple");
+    document.body.appendChild(ripple);
+
+    setTimeout(() => {
+        ripple.remove();
+    }, 800);
 };
 
 export const showError = (message) => {
