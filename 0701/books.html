@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>次の配列booksを使用し、filter() を使って価格が2,000円未満の本を取得し、map() を使って本のタイトルだけの配列を作成し、さらに reduce()
+        を使って本の価格の合計を求めてください。それぞれの結果をconsole.log()で表示してください。JavaScriptのコードのみを入力してください。</p>
+    <script>
+        const books = [
+            { title: 'HTML入門', price: 1800 },
+            { title: 'CSS入門', price: 2200 },
+            { title: 'JavaScript入門', price: 2500 },
+            { title: 'PHP入門', price: 1900 }
+        ];
+
+        const pricebooks = books.filter((book) => {
+            return book.price >= 2000;
+        });
+
+        const booktitle = books.map(function (title) {
+
+        })
+    </script>
+</body>
+
+</html>

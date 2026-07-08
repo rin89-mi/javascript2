@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>次の配列membersを使用し、filter() を使って gradeが2以上のデータを取得し、さらに find() を使ってidが102のデータを取得してください。それぞれの結果を console.log()
+        で表示してください。JavaScriptのコードのみを入力してください。</p>
+    <script>
+        const members = [
+            { id: 101, name: '山田', grade: 1 },
+            { id: 102, name: '佐藤', grade: 2 },
+            { id: 103, name: '鈴木', grade: 3 }
+        ];
+        const filterMember = members.filter((member) => {
+            return member.grade >= 2;
+        });
+        console.log(filterMember);
+        const findMember = members.find((member) => {
+            return member.id === 102;
+        });
+        console.log(findMember);
+    </script>
+</body>
+
+</html>
